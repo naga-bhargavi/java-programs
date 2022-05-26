@@ -13,6 +13,12 @@ class DuplicateNumbers
 		{
 			a[i]=s.nextInt();
 		}
+		int count=0;
+		for(int i=0;i<n;i++)
+		{
+			if(a[i]==0)
+				count++;
+		}
 		for(int i=0;i<n;i++)
 		{
 			for(int j=i+1;j<n;j++)
@@ -24,6 +30,8 @@ class DuplicateNumbers
 			}
 		}
 		System.out.println("Values After removing duplicates: ");
+		if(count>=1)
+			System.out.println(0);
 		for(int i=0;i<n;i++)
 		{
 			if(a[i]==0)
